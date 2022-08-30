@@ -1,5 +1,4 @@
 #import blender
-from lib2to3.pytree import convert
 import os
 import kivy
 from kivy.app import App
