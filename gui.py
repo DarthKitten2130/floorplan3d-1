@@ -1,4 +1,5 @@
 import os
+import subprocess as sub
 import kivy
 from kivy.app import App
 from kivy.uix.label import Label
@@ -67,5 +68,6 @@ class Kivyapp(App):
                 pos_hint={'center_x':0.5, 'center_y':0.2}, font_size='17sp',
                 color=[0.6,1,0,1],  font_name='Cour')
         screen.add_widget(l3)
+        sub.Popen(["blender","C:\\Users\\Hp\\Desktop\\floorplan3d\\ARCHI_2\\archi-20220830T050415Z-001\\archi\\saves\\2.blend"])
 
 Kivyapp().run()
