@@ -1,4 +1,3 @@
-#import blender
 import os
 import kivy
 from kivy.app import App
@@ -6,7 +5,7 @@ from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivymd.uix.screen import Screen
 from kivy.uix.image import Image
-#from kivy.uix.widget import Widget
+from kivy.config import Config
 
 
 
@@ -30,8 +29,12 @@ class Kivyapp(App):
         color=[0.6,1,0,1],  font_name='Cour')
 
         
-
-        p1 = Image(source='dog.jpg')
+        # Image
+        p1 = Image(source='map.png')
+        Config.set('graphics', 'resizable', True)
+        p1.size_hint_x = 0.4
+        p1.size_hint_ = 0.4
+        p1.pos = (250,-20)
 
         b1 = Button(text ='Convert to 3D', size=(1,1), size_hint=(.15,.08),
         pos =(430,50))
@@ -64,9 +67,5 @@ class Kivyapp(App):
                 pos_hint={'center_x':0.5, 'center_y':0.2}, font_size='17sp',
                 color=[0.6,1,0,1],  font_name='Cour')
         screen.add_widget(l3)
-
-Kivyapp().run()
-        
-
 
 Kivyapp().run()
